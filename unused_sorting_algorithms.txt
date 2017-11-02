@@ -1,0 +1,42 @@
+	/* selection sort
+	const int START = 0;
+	const int PREVIOUS = -1;
+	int player;
+	for (player = 0; player < players; player++) {
+		int i; // index of outer loop
+		int j; // index of inner loop
+		for (i = cardsPerHand + PREVIOUS; i > START; i--) {
+			int maxIndex = 0;
+			for (j = 1; j <= i; j++) {
+				if (hands[maxIndex][player].rank < hands[j][player].rank) {
+					maxIndex = j;
+				} // end if
+			} // end for
+			Card tempCard = hands[i][player];
+			hands[i][player] = hands[maxIndex][player];
+			hands[maxIndex][player] = tempCard;
+		} // end for
+	} // end for
+	*/
+
+	/* insertion sort
+	const int START = 0;
+	int previous;
+	int player;
+	for (player = 0; player < players; player++) {
+		int i; // index of outer loop
+		int j; // index of inner loop
+		for (i = 1; i < cardsPerHand; i++) {
+			Card tempCard = hands[i][player];
+			for (j = i; j > START; j--) {
+				previous = j - 1;
+				if (tempCard.rank >= hands[previous][player].rank) {
+					break;
+				} else {
+					hands[j][player] = hands[previous][player];
+				} // end if else
+			} // end for
+			hands[j][player] = tempCard;
+		} // end for
+	} // end for
+	*/

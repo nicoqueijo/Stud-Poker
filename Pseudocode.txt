@@ -1,0 +1,89 @@
+--------------------------------------------------------------------------------
+
+/*
+   	Nicolás Queijo
+	Program #4 Simulates a game of stud poker
+	PID: 5152398
+   	COP4338 - U03
+    T/R 18:25 - 19:40
+    William Feild
+	I hereby certify that this collective work is my own 
+	and none of it is the work of any other person or entity. 
+ */
+ 
+ 
+ PSEUDOCODE:
+ 
+ 1. Validate the command-line arguments entered by the user.
+		We first must verify that exactly two command-line arguments were
+		specified. If not print an appropriate error message and exit the
+		program.
+		Once we have verified that we received 2 command-line arguments we 
+		must assure that both of these arguments are in the form of positive
+		integers. If they are not print an appropriate error message and exit
+		the program. 
+		Once we have verified that both of the received arguments are positive
+		integers, assure that the first is within the range of 1-13. If it is
+		not in that range print an appropriate error message and exit the
+		program. The second argument must be within the range of 1-7. If it is
+		not in that range print an appropriate error message and exit the
+		program.
+		Once we have verified that both integers are within the valid range we 
+		must verify that their product does not exceed 52. If it does print an
+		appropriate error message and exit the program.
+		
+2. Create the original deck with the 52 ordered cards.
+		We can do this by creating a 2D array of Hands where the two dimensions
+		represent the rows and columns of the deck.
+	
+3. Display the original, ordered deck to the console.
+		This can be done by traversing the deck array and printing out each
+		card to the console.
+	
+4. Shuffle the original deck to randomize the card order.
+		This can be done by traversing the deck and swapping each card with a 
+		another random card in the deck.
+		
+5. Display the now shuffled deck to the console.
+		This can be done by traversing the deck array and printing out each
+		card to the console.
+		
+6. Deal the cards to the players in the game.
+		For this we will need the information we validated in step one. In step
+		one we gathered the cards per hand and the number of players participating
+		in the game. To perform this deal of cards we can traverse through the
+		deck of cards and give each player x cards where x is the cards per hand
+		value. This will be stored as its own entity in another 2D array.
+		
+7. Display the hands to the console.
+		To display the hands to the console we can simply traverse the array we
+		are using to store the hands and print each card of each player.
+
+8. Sort the hands by acsending order.
+		We can do this by using a simple algorithm like bubble sort. Each hand
+		is at most five cards so time complexity is not a problem here.
+
+9. Display the hands once they have been sorted.
+		To display the hands to the console we can simply traverse the array we
+		are using to store the hands and print each card of each player.
+		
+10. Assign the poker ranks of each hand.
+		We can do this by iterating through each hand and in each hand analyzing
+		the contents to assign a specific poker rank to that hand.
+		
+11. Display the poker ranks of each hand.
+		To do this we can traverse through each hand and print out whichever rank
+		we had assigned to it in the previous step. We also take note of which
+		hand(s) won the game here and display that information to the console.
+		
+12. Create preset hands to test out the ranking system.
+		In this step we create one hand for each possible poker rank. We assure the
+		hand matches the condition for this poker rank.
+		
+13. Test out the ranking system.
+		With our preset hands we can now assign them all their poker rank. If our
+		ranking system is correct then each preset hand should be assigned its
+		correct poker rank. Display the poker rank assigned to each preset hand
+		to verify the correctness of our ranking system.
+		
+--------------------------------------------------------------------------------
